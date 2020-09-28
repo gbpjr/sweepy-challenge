@@ -141,6 +141,7 @@
     .sweepy-todo {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
         margin: 15px;
         align-items: flex-start;
     }
