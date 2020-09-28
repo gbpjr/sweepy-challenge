@@ -1,0 +1,19 @@
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+@mixin animate($in, $out) {
+  -webkit-transition: all $in ease-in-out $out;
+  -moz-transition: all $in ease-in-out $out;
+  -o-transition: all $in ease-in-out $out;
+  -ms-transition: all $in ease-in-out $out;
+  transition: all $in ease-in-out $out;
+}
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
