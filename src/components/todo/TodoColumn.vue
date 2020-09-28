@@ -11,8 +11,6 @@
             <div class="field-container">
                 <input 
                     class="field-input" 
-                    id="inputid" 
-                    name="inputTask" 
                     type="text" placeholder="" 
                     v-model="newTask"
                     v-on:input="newTask = $event.target.value"
