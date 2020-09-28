@@ -120,6 +120,7 @@
 
             remove: function () {
                 this.$delete(this.tasks, this.selectedIndex)
+                this.active = null
             },
 
             addTask: function (newTask) {
