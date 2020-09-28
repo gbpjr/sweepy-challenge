@@ -123,8 +123,12 @@
             },
 
             addTask: function (newTask) {
-                console.log(newTask)
-                this.tasks.push(newTask)
+                if(newTask)
+                    this.tasks.push({
+                        'id': Math.random() * 20,
+                        'title': newTask,
+                        'status': 'backlog'
+                    })
             }
         }
     }

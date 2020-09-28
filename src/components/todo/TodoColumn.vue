@@ -7,19 +7,19 @@
         </div>
         <span v-if="index===0" :key="index" @click="willAdd" class="column-footer">Add task...</span>
         
-        <span v-if="index===0" v-show="isAdding" @click="addTask()" class="add-new">
+        <span v-if="index===0" v-show="isAdding" class="add-new">
             <div class="field-container">
                 <input 
                     class="field-input" 
                     id="inputid" 
                     name="inputTask" 
                     type="text" placeholder="" 
-                    v-bind:value="newTask"
+                    v-model="newTask"
                     v-on:input="newTask = $event.target.value"
                 >
                 <label class="field-placeholder" for="inputTask">New task</label>
             </div>
-            <a href="#" class="action-button shadow animate yellow">Add</a>
+            <a href="#" @click="addTask()" class="action-button shadow animate yellow">Add</a>
         </span> 
     </div>
 </template>
